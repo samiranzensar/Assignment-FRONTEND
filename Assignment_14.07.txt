@@ -1,0 +1,570 @@
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git
+$ git init
+Initialized empty Git repository in D:/DotNet/Day_1_Git/.git/
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ code README
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git config --edit --global
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ code README
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git add .
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README
+
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ code Instruction.txt
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Instruction.txt
+
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git add .
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Instruction.txt
+        new file:   README
+
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git commit -m "Creates two file names ReadMe and Instructions file"
+[master (root-commit) cab0e92] Creates two file names ReadMe and Instructions file
+ 2 files changed, 5 insertions(+)
+ create mode 100644 Instruction.txt
+ create mode 100644 README
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git log
+commit cab0e92fe6286ff4a68bab5d34b96c93190372c8 (HEAD -> master)
+Author: Samiran Parui <samiran.parui@zensar.com>
+Date:   Tue Jul 14 20:22:01 2020 +0530
+
+    Creates two file names ReadMe and Instructions file
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ code Instruction
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ code Instruction.txt
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git add .
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git commit -m "Edits Instruction file"
+[master a935fba] Edits Instruction file
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git log
+commit a935fbad2a87b4d94a598c952791f6b6f2c3421f (HEAD -> master)
+Author: Samiran Parui <samiran.parui@zensar.com>
+Date:   Tue Jul 14 20:24:29 2020 +0530
+
+    Edits Instruction file
+
+commit cab0e92fe6286ff4a68bab5d34b96c93190372c8
+Author: Samiran Parui <samiran.parui@zensar.com>
+Date:   Tue Jul 14 20:22:01 2020 +0530
+
+    Creates two file names ReadMe and Instructions file
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git log --oneline
+a935fba (HEAD -> master) Edits Instruction file
+cab0e92 Creates two file names ReadMe and Instructions file
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git reset --hard cab0e92
+HEAD is now at cab0e92 Creates two file names ReadMe and Instructions file
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git log
+commit cab0e92fe6286ff4a68bab5d34b96c93190372c8 (HEAD -> master)
+Author: Samiran Parui <samiran.parui@zensar.com>
+Date:   Tue Jul 14 20:22:01 2020 +0530
+
+    Creates two file names ReadMe and Instructions file
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ code Instruction.txt
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git add .
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git commit -m "Adds a line for checking a git diff"
+[master 8f8433c] Adds a line for checking a git diff
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git log --oneline
+8f8433c (HEAD -> master) Adds a line for checking a git diff
+cab0e92 Creates two file names ReadMe and Instructions file
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git diff 8f84 cab0
+diff --git a/Instruction.txt b/Instruction.txt
+index 3b90315..4f1c076 100644
+--- a/Instruction.txt
++++ b/Instruction.txt
+@@ -1,5 +1,3 @@
+ Hello Ma'am,
+ Hope you are doing well!!!
+-This is Samiran's repository
+-
+-This line is added for git diff command
+\ No newline at end of file
++This is Samiran's repository
+\ No newline at end of file
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git branch check
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git branch
+  check
+* master
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git checkout check
+Switched to branch 'check'
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git branch
+* check
+  master
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ code Instruction.txt
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git add .
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git commit -m "Adds a line for working with branching"
+[check 97dac17] Adds a line for working with branching
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git log --oneline
+97dac17 (HEAD -> check) Adds a line for working with branching
+8f8433c (master) Adds a line for checking a git diff
+cab0e92 Creates two file names ReadMe and Instructions file
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git checkout master
+Switched to branch 'master'
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git branch
+  check
+* master
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git marge check
+git: 'marge' is not a git command. See 'git --help'.
+
+The most similar command is
+        merge
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git merge check
+Updating 8f8433c..97dac17
+Fast-forward
+ Instruction.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git branch recursive
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git checkout recursive
+Switched to branch 'recursive'
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (recursive)
+$ code index.html
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (recursive)
+$ git branch
+  check
+  master
+* recursive
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (recursive)
+$ git checkout master
+Switched to branch 'master'
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ code Instruction.txt
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git branch
+  check
+* master
+  recursive
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git checkout recursive
+Switched to branch 'recursive'
+M       Instruction.txt
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (recursive)
+$ code index.html
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (recursive)
+$ git add .
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (recursive)
+$ git commit -m "adds a hyperlink in index.html"
+[recursive f4f49fa] adds a hyperlink in index.html
+ 2 files changed, 14 insertions(+), 1 deletion(-)
+ create mode 100644 index.html
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (recursive)
+$ git checkout master
+Switched to branch 'master'
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git add .
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git commit -m "Adds a line in Instruction.txt file"
+On branch master
+nothing to commit, working tree clean
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git branch
+  check
+* master
+  recursive
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git merge recursive
+Updating 97dac17..f4f49fa
+Fast-forward
+ Instruction.txt |  4 +++-
+ index.html      | 11 +++++++++++
+ 2 files changed, 14 insertions(+), 1 deletion(-)
+ create mode 100644 index.html
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git branch
+  check
+* master
+  recursive
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git checkout check
+Switched to branch 'check'
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git log
+commit 97dac1733926a62a500de7ef049d4d043bf3ad25 (HEAD -> check)
+Author: Samiran Parui <samiran.parui@zensar.com>
+Date:   Tue Jul 14 20:36:01 2020 +0530
+
+    Adds a line for working with branching
+
+commit 8f8433c2945ba9c256c6855d387c845b9c841a4d
+Author: Samiran Parui <samiran.parui@zensar.com>
+Date:   Tue Jul 14 20:30:59 2020 +0530
+
+    Adds a line for checking a git diff
+
+commit cab0e92fe6286ff4a68bab5d34b96c93190372c8
+Author: Samiran Parui <samiran.parui@zensar.com>
+Date:   Tue Jul 14 20:22:01 2020 +0530
+
+    Creates two file names ReadMe and Instructions file
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ code new.text
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ code add.
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git add .
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git commit -m "creats a file names new.text"
+[check ad343cf] creats a file names new.text
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new.text
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git log
+commit ad343cf91fdba652d00478de1d1087739a564231 (HEAD -> check)
+Author: Samiran Parui <samiran.parui@zensar.com>
+Date:   Tue Jul 14 20:50:45 2020 +0530
+
+    creats a file names new.text
+
+commit 97dac1733926a62a500de7ef049d4d043bf3ad25
+Author: Samiran Parui <samiran.parui@zensar.com>
+Date:   Tue Jul 14 20:36:01 2020 +0530
+
+    Adds a line for working with branching
+
+commit 8f8433c2945ba9c256c6855d387c845b9c841a4d
+Author: Samiran Parui <samiran.parui@zensar.com>
+Date:   Tue Jul 14 20:30:59 2020 +0530
+
+    Adds a line for checking a git diff
+
+commit cab0e92fe6286ff4a68bab5d34b96c93190372c8
+Author: Samiran Parui <samiran.parui@zensar.com>
+Date:   Tue Jul 14 20:22:01 2020 +0530
+
+    Creates two file names ReadMe and Instructions file
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git checkout master
+Switched to branch 'master'
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ code newMaster.txt
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git branch
+  check
+* master
+  recursive
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git checkout check
+Switched to branch 'check'
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ code newcheck.txt
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git add .
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git commit -m "Adds new file names newcheck.txt"
+[check 086ca91] Adds new file names newcheck.txt
+ 2 files changed, 5 insertions(+)
+ create mode 100644 newMaster.txt
+ create mode 100644 newcheck.txt
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (check)
+$ git checkout master
+Switched to branch 'master'
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git merge check
+Merge made by the 'recursive' strategy.
+ new.text      | 1 +
+ newMaster.txt | 2 ++
+ newcheck.txt  | 3 +++
+ 3 files changed, 6 insertions(+)
+ create mode 100644 new.text
+ create mode 100644 newMaster.txt
+ create mode 100644 newcheck.txt
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git branch
+  check
+* master
+  recursive
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ ls
+index.html  Instruction.txt  new.text  newcheck.txt  newMaster.txt  README
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git remote add origin https://github.com/samiranzensar/Day1GitTest.git
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git push -u origin master
+Enumerating objects: 23, done.
+Counting objects: 100% (23/23), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (23/23), 2.13 KiB | 364.00 KiB/s, done.
+Total 23 (delta 8), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (8/8), done.
+To https://github.com/samiranzensar/Day1GitTest.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git pull https://github.com/samiranzensar/Day1GitTest.git
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 673 bytes | 7.00 KiB/s, done.
+From https://github.com/samiranzensar/Day1GitTest
+ * branch            HEAD       -> FETCH_HEAD
+Updating 42e04f4..d464fb3
+Fast-forward
+ new.text | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ code new.text
+
+
+samir@VENOMOUS-PC MINGW64 /d/DotNet/Day_1_Git (master)
+$ git push
+Everything up-to-date
+

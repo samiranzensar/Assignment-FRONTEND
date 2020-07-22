@@ -1,0 +1,7 @@
+findout: 
+    1. meta tag
+    2. charset
+    3. breakpoint
+
+viewport: The viewport is the user's visible area of a web page.
+            it depends on users device
